@@ -12,7 +12,7 @@ import java.awt.*;
  * Vorgegebene Klasse des Frameworks. Modifikation auf eigene Gefahr.
  */
 public class MainController {
-
+    //Test
     // Attribute
 
     // Referenzen
