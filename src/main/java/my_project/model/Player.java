@@ -35,16 +35,24 @@ public class Player extends InteractiveGraphicalObject {
         drawTool.drawFilledRectangle(x,y,width,height);
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.drawRectangle(x,y,width,height);
+
+        //drawTool.setCurrentColor (0, 0, 0, 255);
+        //drawTool.drawRectangle (100, 100, 100);
     }
 
     @Override
     public void update(double dt) {
-        //TODO 05 Überarbeiten Sie die Update-Methode derart, dass ein Player-Objekt nicht den Bildschirm verlassen kann und immer zu sehen ist.
         if(direction == 0){
             x = x + speed*dt;
+            if (this.x>750){
+                this.x=750;
+            }
         }
         if(direction == 2){
             x = x - speed*dt;
+            if (this.x<0){
+                this.x=0;
+            }
         }
     }
 

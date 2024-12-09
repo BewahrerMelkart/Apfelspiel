@@ -367,4 +367,6 @@ public class DrawTool {
         return parent;
     }
 
+    public void circle(int i, int i1, int i2) {
+    }
 }
