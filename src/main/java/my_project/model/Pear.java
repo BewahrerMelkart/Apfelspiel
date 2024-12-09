@@ -32,7 +32,7 @@ public class Pear extends GraphicalObject {
         }
     }
 
-    private void jumpBack () {
+    public void jumpBack() {
         this.y = 0;
         this.x = 800*Math.random();
     }

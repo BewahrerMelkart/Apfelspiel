@@ -30,7 +30,7 @@ public class Apple extends GraphicalObject {
             this.jumpBack();
         }
     }
-    private void jumpBack () {
+    public void jumpBack() {
         this.y = 0;
         this.x = 800*Math.random();
     }
