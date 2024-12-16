@@ -48,7 +48,7 @@ public class ProgramController {
         pear01 = new Pear(xPos, yPos);
         viewController.draw(pear01);
 
-        player01 = new Player(100, Config.WINDOW_HEIGHT-500);
+        player01 = new Player(100, Config.WINDOW_HEIGHT-200);
         viewController.draw(player01);
         viewController.register(player01);
     }
