@@ -13,6 +13,7 @@ public class Apple extends GraphicalObject {
         this.y = y;
         speed = 150;
         radius = 30;
+        this.setNewImage("src/main/resources/graphic/apple.png");
     }
 
     @Override
@@ -21,6 +22,8 @@ public class Apple extends GraphicalObject {
         drawTool.drawFilledCircle(x,y,radius);
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.drawCircle(x,y,radius);
+
+        drawTool.drawImage(this.getMyImage(), x, y);
     }
 
     @Override
