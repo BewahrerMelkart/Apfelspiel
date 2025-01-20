@@ -45,10 +45,10 @@ public class ProgramController {
 
         xPos = Math.random()*(Config.WINDOW_WIDTH-50) + 50;
         yPos = Math.random()*(Config.WINDOW_HEIGHT-50) + 50;
-        pear01 = new Pear(xPos, yPos);
+        pear01 = new Pear (xPos, yPos);
         viewController.draw(pear01);
 
-        player01 = new Player(100, Config.WINDOW_HEIGHT-200);
+        player01 = new Player(100, Config.WINDOW_HEIGHT-300);
         viewController.draw(player01);
         viewController.register(player01);
     }
