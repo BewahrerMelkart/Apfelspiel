@@ -11,6 +11,7 @@ import KAGO_framework.view.DrawTool;
 public class Background extends GraphicalObject {
 
     //Referenzen
+
     String chosenPhrase;
     String[] phrases = new String[]{"\"An apple a day keeps the doctor away!\" - England",
             "\"Eat an apple on going to bed, and you’ll keep the doctor from earning his bread.\" - Wales",
@@ -33,6 +34,8 @@ public class Background extends GraphicalObject {
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.formatText("Arial",1,25);
         drawTool.drawText(450,50,chosenPhrase);
+
+
     }
 
     @Override

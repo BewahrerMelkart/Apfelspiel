@@ -37,6 +37,7 @@ public class Player extends InteractiveGraphicalObject {
         drawTool.setCurrentColor(0,0,0,255);
         drawTool.drawRectangle(x,y,width,height);
 
+        drawTool.drawText(100,100, String.valueOf(this.points));
         //drawTool.setCurrentColor (0, 0, 0, 255);
         //drawTool.drawRectangle (100, 100, 100);
     }
