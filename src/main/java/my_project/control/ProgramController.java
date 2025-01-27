@@ -3,7 +3,6 @@ package my_project.control;
 import KAGO_framework.control.ViewController;
 import my_project.Config;
 import my_project.model.Apple;
-import my_project.model.Fruit;
 import my_project.model.Pear;
 import my_project.model.Player;
 
@@ -19,8 +18,8 @@ public class ProgramController {
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
 
-    private Fruit fruit01;
-    private Fruit fruit02;
+    private Apple apple01;
+    private Pear pear01;
     private Player player01;
 
     /**
@@ -41,13 +40,13 @@ public class ProgramController {
     public void startProgram() {
         double xPos = Math.random()*(Config.WINDOW_WIDTH-50) + 50;
         double yPos = Math.random()*(Config.WINDOW_HEIGHT-50) + 50;
-        fruit01 = new Fruit(100, 100, "apple");
-        viewController.draw(fruit01);
+        apple01 = new Apple(xPos, yPos);
+        viewController.draw(apple01);
 
         xPos = Math.random()*(Config.WINDOW_WIDTH-50) + 50;
         yPos = Math.random()*(Config.WINDOW_HEIGHT-50) + 50;
-        fruit02 = new Fruit (300, 50, "pear");
-        viewController.draw(fruit02);
+        pear01 = new Pear(xPos, yPos);
+        viewController.draw(pear01);
 
         player01 = new Player(100, Config.WINDOW_HEIGHT-200);
         viewController.draw(player01);
@@ -62,12 +61,14 @@ public class ProgramController {
 
         //Weitere TODOs folgen und werden im Unterricht formuliert. Spätestens nach TODO 08 sollte der Aufbau des Projekts durchdacht werden.
 
-    if (fruit01.collidesWith(player01)){
-        fruit01.jumpBack();
+    if (pear01.collidesWith(player01)){
+        pear01.jumpBack();
+        player01.points = (int) (player01.points + pear01.score);
     }
 
-    if (fruit02.collidesWith(player01)){
-        fruit02.jumpBack();
+    if (apple01.collidesWith(player01)){
+        apple01.jumpBack();
+        player01.points = (int) (player01.points + apple01.score);
     }
 
 }

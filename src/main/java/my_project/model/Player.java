@@ -10,7 +10,7 @@ public class Player extends InteractiveGraphicalObject {
 
     //Attribute
     private double speed;
-    private int points;
+    public int points;
 
     //Tastennummern zur Steuerung
     private int keyToGoLeft;
@@ -23,6 +23,7 @@ public class Player extends InteractiveGraphicalObject {
         speed = 150;
         width = 80;
         height = 40;
+        points = 0;
 
         this.keyToGoLeft    = KeyEvent.VK_A;
         this.keyToGoRight   = KeyEvent.VK_D;
