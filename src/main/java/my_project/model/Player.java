@@ -28,18 +28,21 @@ public class Player extends InteractiveGraphicalObject {
         this.keyToGoLeft    = KeyEvent.VK_A;
         this.keyToGoRight   = KeyEvent.VK_D;
         this.direction      = -1; //-1 keine Bewegung, 0 nach rechts, 2 nach links
+        this.setNewImage("src/main/resources/graphic/player.png");
     }
 
     @Override
     public void draw(DrawTool drawTool) {
-        drawTool.setCurrentColor(157,152,3,255);
-        drawTool.drawFilledRectangle(x,y,width,height);
-        drawTool.setCurrentColor(0,0,0,255);
-        drawTool.drawRectangle(x,y,width,height);
-
-        drawTool.drawText(100,100, String.valueOf(this.points));
+        //drawTool.setCurrentColor(157,152,3,255);
+        //drawTool.drawFilledRectangle(x,y,width,height);
+        //drawTool.setCurrentColor(0,0,0,255);
+        //drawTool.drawRectangle(x,y,width,height);
+        //drawTool.drawRectangle(x,y,width,height);
         //drawTool.setCurrentColor (0, 0, 0, 255);
         //drawTool.drawRectangle (100, 100, 100);
+
+        drawTool.drawText(100,100, String.valueOf(this.points));
+        drawTool.drawImage(this.getMyImage(), x, y);
     }
 
     @Override

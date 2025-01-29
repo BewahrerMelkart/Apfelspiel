@@ -3,7 +3,7 @@ package my_project.model;
 import KAGO_framework.model.GraphicalObject;
 import KAGO_framework.view.DrawTool;
 
-public class Fruit extends GraphicalObject {
+public abstract class  Fruit extends GraphicalObject {
 
     //Attribute
     private double speed;
@@ -27,4 +27,3 @@ public class Fruit extends GraphicalObject {
         this.x = 800*Math.random();
     }
 }
-
